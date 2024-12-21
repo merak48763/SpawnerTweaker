@@ -1,0 +1,9 @@
+use ::java::server::world::entity::display::DecomposedTransformation
+
+type StorageRoot<T> = struct {
+  root: T
+}
+
+dispatch :storage[st:spawner] to StorageRoot<:block[spawner]>
+dispatch :storage[st:transformation] to StorageRoot<DecomposedTransformation>
+dispatch :storage[st:text] to StorageRoot<[#[text_component] string]>
