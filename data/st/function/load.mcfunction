@@ -10,6 +10,10 @@ scoreboard players set #state st.var 0
 # 1: spawn range
 scoreboard players set #selected_param st.var 0
 
+# 0: default (EN)
+# 1: zh_TW
+scoreboard players set #locale st.var 0
+
 # UUIDs:
 # 7374-0-0-0-1: spawner center
 # 7374-0-0-0-2: @p range [X-axis]

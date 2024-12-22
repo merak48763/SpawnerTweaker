@@ -1,0 +1,61 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "netherite_sword",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "!attribute_modifiers": {},
+                "!enchantments": {},
+                "!max_damage": {},
+                "!damage": {},
+                "item_model": "stick",
+                "enchantment_glint_override": true,
+                "rarity": "epic",
+                "custom_data": "{st: {}}"
+              }
+            },
+            {
+              "function": "set_name",
+              "target": "item_name",
+              "name": "Wand"
+            },
+            {
+              "function": "set_lore",
+              "mode": "replace_all",
+              "lore": [
+                [{"keybind": "key.attack", "color": "white", "italic": false}, ": Decrease"],
+                [{"keybind": "key.use", "color": "white", "italic": false}, ": Increase"],
+                [{"keybind": "key.sprint", "color": "white", "italic": false}, " + ", {"keybind": "key.attack"}, ": Previous field"],
+                [{"keybind": "key.sprint", "color": "white", "italic": false}, " + ", {"keybind": "key.use"}, ": Next field"]
+              ]
+            },
+            {
+              "function": "reference",
+              "name": "st:wand/zh_tw",
+              "conditions": [
+                {
+                  "condition": "value_check",
+                  "value": {
+                    "type": "score",
+                    "target": {
+                      "type": "fixed",
+                      "name": "#locale"
+                    },
+                    "score": "st.var"
+                  },
+                  "range": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

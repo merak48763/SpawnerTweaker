@@ -1,3 +1,4 @@
+scoreboard players reset * st.var
 scoreboard objectives remove st.var
 data remove storage st:spawner root
 data remove storage st:transformation root

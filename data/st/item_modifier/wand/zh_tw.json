@@ -1,0 +1,17 @@
+[
+  {
+    "function": "set_name",
+    "target": "item_name",
+    "name": "魔法棒棒"
+  },
+  {
+    "function": "set_lore",
+    "mode": "replace_all",
+    "lore": [
+      [{"keybind": "key.attack", "color": "white", "italic": false}, "：減少數值"],
+      [{"keybind": "key.use", "color": "white", "italic": false}, "：增加數值"],
+      [{"keybind": "key.sprint", "color": "white", "italic": false}, " + ", {"keybind": "key.attack"}, "：上一個欄位"],
+      [{"keybind": "key.sprint", "color": "white", "italic": false}, " + ", {"keybind": "key.use"}, "：下一個欄位"]
+    ]
+  }
+]

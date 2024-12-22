@@ -11,7 +11,8 @@ execute \
       0., 0., 0., 1. \
     ], \
     brightness: {block: 15, sky: 15}, \
-    Glowing: true \
+    Glowing: true, \
+    view_range: 2 \
   }
 # 7374-0-0-0-2
 execute \
@@ -21,6 +22,7 @@ execute \
     alignment: "center", \
     text_opacity: 100, \
     background: 0, \
+    view_range: 2 \
   }
 execute as 7374-0-0-0-2 at @s run rotate @s facing ~1 ~ ~
 # 7374-0-0-0-3
@@ -30,7 +32,8 @@ execute \
     UUID: [I; 29556,0,0,3], \
     alignment: "center", \
     text_opacity: 100, \
-    background: 0 \
+    background: 0, \
+    view_range: 2 \
   }
 execute as 7374-0-0-0-3 at @s run rotate @s facing ~ ~1 ~
 # 7374-0-0-0-4
@@ -40,7 +43,8 @@ execute \
     UUID: [I; 29556,0,0,4], \
     alignment: "center", \
     text_opacity: 100, \
-    background: 0 \
+    background: 0, \
+    view_range: 2 \
   }
 execute as 7374-0-0-0-4 at @s run rotate @s facing ~ ~ ~1
 # 7374-0-0-0-5
@@ -50,7 +54,8 @@ execute \
     UUID: [I; 29556,0,0,5], \
     alignment: "center", \
     text_opacity: 100, \
-    background: 0 \
+    background: 0, \
+    view_range: 2 \
   }
 execute as 7374-0-0-0-5 at @s run rotate @s facing ~-1 ~ ~
 # 7374-0-0-0-6
@@ -60,7 +65,8 @@ execute \
     UUID: [I; 29556,0,0,6], \
     alignment: "center", \
     text_opacity: 100, \
-    background: 0 \
+    background: 0, \
+    view_range: 2 \
   }
 execute as 7374-0-0-0-6 at @s run rotate @s facing ~ ~-1 ~
 # 7374-0-0-0-7
@@ -70,7 +76,8 @@ execute \
     UUID: [I; 29556,0,0,7], \
     alignment: "center", \
     text_opacity: 100, \
-    background: 0 \
+    background: 0, \
+    view_range: 2 \
   }
 execute as 7374-0-0-0-7 at @s run rotate @s facing ~ ~ ~-1
 # 7374-0-0-0-8
@@ -80,6 +87,7 @@ execute \
     UUID: [I; 29556,0,0,8], \
     item: {id: gray_stained_glass}, \
     brightness: {block: 15, sky: 15}, \
+    view_range: 2 \
   }
 
 execute at @s run function st:state/edit/enter
