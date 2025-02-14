@@ -1,6 +1,8 @@
 execute store result score #player_range st.var run data get storage st:spawner root.RequiredPlayerRange
 execute store result score #spawn_range st.var run data get storage st:spawner root.SpawnRange
 
+function st:state/edit/text/normal/load_name
+
 execute \
   if score #selected_param st.var matches 0 \
   if score #locale st.var matches 0 \
