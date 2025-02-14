@@ -8,6 +8,7 @@ scoreboard players set #state st.var 0
 
 # 0: @p range
 # 1: spawn range
+# 2: spawn count
 scoreboard players set #selected_param st.var 0
 
 # 0: default (EN)

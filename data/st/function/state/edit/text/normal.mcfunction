@@ -1,5 +1,6 @@
 execute store result score #player_range st.var run data get storage st:spawner root.RequiredPlayerRange
 execute store result score #spawn_range st.var run data get storage st:spawner root.SpawnRange
+execute store result score #spawn_count st.var run data get storage st:spawner root.SpawnCount
 
 function st:state/edit/text/normal/load_name
 
@@ -71,4 +72,39 @@ execute \
   run data modify storage st:text root append value '[ \
     {"text": "生成範圍：", "color": "white"}, \
     {"score": {"name": "#spawn_range", "objective": "st.var"}} \
+  ]'
+
+execute \
+  if score #selected_param st.var matches 2 \
+  if score #locale st.var matches 0 \
+  run data modify storage st:text root append value '[ \
+    {"text": "Spawn count: ", "color": "white"}, \
+    {"text": "[", "color": "yellow", "extra": [ \
+      {"score": {"name": "#spawn_count", "objective": "st.var"}}, \
+      "]" \
+    ]} \
+  ]'
+execute \
+  if score #selected_param st.var matches 2 \
+  if score #locale st.var matches 1 \
+  run data modify storage st:text root append value '[ \
+    {"text": "生成數量：", "color": "white"}, \
+    {"text": "[", "color": "yellow", "extra": [ \
+      {"score": {"name": "#spawn_count", "objective": "st.var"}}, \
+      "]" \
+    ]} \
+  ]'
+execute \
+  unless score #selected_param st.var matches 2 \
+  if score #locale st.var matches 0 \
+  run data modify storage st:text root append value '[ \
+    {"text": "Spawn count: ", "color": "white"}, \
+    {"score": {"name": "#spawn_count", "objective": "st.var"}} \
+  ]'
+execute \
+  unless score #selected_param st.var matches 2 \
+  if score #locale st.var matches 1 \
+  run data modify storage st:text root append value '[ \
+    {"text": "生成數量：", "color": "white"}, \
+    {"score": {"name": "#spawn_count", "objective": "st.var"}} \
   ]'
