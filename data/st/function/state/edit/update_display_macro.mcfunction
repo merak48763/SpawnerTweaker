@@ -13,8 +13,13 @@ data modify storage st:transformation root set value { \
   right_rotation: [0., 0., 0., 1.], \
   translation: [0., 0., 0.] \
 }
-execute store result storage st:transformation root.scale[0] double 1 run data get storage st:spawner root.SpawnRange
-execute store result storage st:transformation root.scale[2] double 1 run data get storage st:spawner root.SpawnRange
+execute store result score #spawn_range st.var run data get storage st:spawner root.SpawnRange
+scoreboard players operation #spawn_range st.var += #spawn_range st.var
+scoreboard players add #spawn_range st.var 1
+execute \
+  store result storage st:transformation root.scale[0] double 1 \
+  store result storage st:transformation root.scale[2] double 1 \
+  run scoreboard players get #spawn_range st.var
 data modify entity 7374-0-0-0-8 transformation set from storage st:transformation root
 
 # Required range display
