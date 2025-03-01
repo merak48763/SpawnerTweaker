@@ -1,7 +1,7 @@
 # SpawnerTweaker
 
 A data pack that makes it easier to fine-tune mob spawners.  
-Adapted from [link2012's version](https://youtu.be/3UYL-0HSt2s).  
+Adapted from [the-link2012/spawner_tweaker](https://github.com/the-link2012/spawner_tweaker).  
 Minecraft version: 1.21.4
 
 > [!Warning]
