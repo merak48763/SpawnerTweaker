@@ -1,4 +1,5 @@
 use ::java::world::entity::display::DecomposedTransformation
+use ::java::util::text::Text
 
 type StorageRoot<T> = struct {
   root: T
@@ -7,5 +8,6 @@ type StorageRoot<T> = struct {
 dispatch :storage[st:spawner] to StorageRoot<:block[spawner]>
 dispatch :storage[st:transformation] to StorageRoot<DecomposedTransformation>
 dispatch :storage[st:text] to StorageRoot<[#[text_component] string]>
+dispatch :storage[st:snbt_text] to StorageRoot<Text>
 
 dispatch mcdoc:custom_data[st] to struct {}

@@ -1,50 +1,18 @@
-execute \
-  if score #selected_param st.var matches 0 \
-  if score #locale st.var matches 0 \
-  run data modify storage st:text root append value '{"text": "[@p range]", "color": "yellow"}'
-execute \
-  if score #selected_param st.var matches 0 \
-  if score #locale st.var matches 1 \
-  run data modify storage st:text root append value '{"text": "[觸發範圍]", "color": "yellow"}'
-execute \
-  unless score #selected_param st.var matches 0 \
-  if score #locale st.var matches 0 \
-  run data modify storage st:text root append value '{"text": "@p range", "color": "white"}'
-execute \
-  unless score #selected_param st.var matches 0 \
-  if score #locale st.var matches 1 \
-  run data modify storage st:text root append value '{"text": "觸發範圍", "color": "white"}'
+execute if score #locale st.var matches 0 run data modify storage st:snbt_text root set value [ \
+  {text: "@p range"}, \
+  {text: "Spawn range"}, \
+  {text: "Spawn count"} \
+]
+execute if score #locale st.var matches 1 run data modify storage st:snbt_text root set value [ \
+  {text: "觸發範圍"}, \
+  {text: "生成範圍"}, \
+  {text: "生成數量"} \
+]
+data modify storage st:snbt_text root[] merge value {color: "white", bold: false}
 
-execute \
-  if score #selected_param st.var matches 1 \
-  if score #locale st.var matches 0 \
-  run data modify storage st:text root append value '{"text": "[Spawn range]", "color": "yellow"}'
-execute \
-  if score #selected_param st.var matches 1 \
-  if score #locale st.var matches 1 \
-  run data modify storage st:text root append value '{"text": "[生成範圍]", "color": "yellow"}'
-execute \
-  unless score #selected_param st.var matches 1 \
-  if score #locale st.var matches 0 \
-  run data modify storage st:text root append value '{"text": "Spawn range", "color": "white"}'
-execute \
-  unless score #selected_param st.var matches 1 \
-  if score #locale st.var matches 1 \
-  run data modify storage st:text root append value '{"text": "生成範圍", "color": "white"}'
-
-execute \
-  if score #selected_param st.var matches 2 \
-  if score #locale st.var matches 0 \
-  run data modify storage st:text root append value '{"text": "[Spawn count]", "color": "yellow"}'
-execute \
-  if score #selected_param st.var matches 2 \
-  if score #locale st.var matches 1 \
-  run data modify storage st:text root append value '{"text": "[生成數量]", "color": "yellow"}'
-execute \
-  unless score #selected_param st.var matches 2 \
-  if score #locale st.var matches 0 \
-  run data modify storage st:text root append value '{"text": "Spawn count", "color": "white"}'
-execute \
-  unless score #selected_param st.var matches 2 \
-  if score #locale st.var matches 1 \
-  run data modify storage st:text root append value '{"text": "生成數量", "color": "white"}'
+execute if score #selected_param st.var matches 0 \
+  run data modify storage st:snbt_text root[0] merge value {color: "yellow", bold: true}
+execute if score #selected_param st.var matches 1 \
+  run data modify storage st:snbt_text root[1] merge value {color: "yellow", bold: true}
+execute if score #selected_param st.var matches 2 \
+  run data modify storage st:snbt_text root[2] merge value {color: "yellow", bold: true}

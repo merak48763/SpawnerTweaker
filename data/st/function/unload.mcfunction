@@ -3,6 +3,7 @@ scoreboard objectives remove st.var
 data remove storage st:spawner root
 data remove storage st:transformation root
 data remove storage st:text root
+data remove storage st:snbt_text root
 
 function st:remove_entities
 

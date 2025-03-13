@@ -40,39 +40,40 @@ data modify entity 7374-0-0-0-4 transformation set from storage st:transformatio
 data modify entity 7374-0-0-0-5 transformation set from storage st:transformation root
 data modify entity 7374-0-0-0-6 transformation set from storage st:transformation root
 data modify entity 7374-0-0-0-7 transformation set from storage st:transformation root
+
 $execute \
   if entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-2 text set value '{"text": "⭕", "color": "dark_green"}'
+  run data modify entity 7374-0-0-0-2 text set value {text: "⭕", color: "dark_green"}
 $execute \
   if entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-3 text set value '{"text": "⭕", "color": "dark_green"}'
+  run data modify entity 7374-0-0-0-3 text set value {text: "⭕", color: "dark_green"}
 $execute \
   if entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-4 text set value '{"text": "⭕", "color": "dark_green"}'
+  run data modify entity 7374-0-0-0-4 text set value {text: "⭕", color: "dark_green"}
 $execute \
   if entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-5 text set value '{"text": "⭕", "color": "dark_green"}'
+  run data modify entity 7374-0-0-0-5 text set value {text: "⭕", color: "dark_green"}
 $execute \
   if entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-6 text set value '{"text": "⭕", "color": "dark_green"}'
+  run data modify entity 7374-0-0-0-6 text set value {text: "⭕", color: "dark_green"}
 $execute \
   if entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-7 text set value '{"text": "⭕", "color": "dark_green"}'
+  run data modify entity 7374-0-0-0-7 text set value {text: "⭕", color: "dark_green"}
 $execute \
   unless entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-2 text set value '{"text": "⭕", "color": "red"}'
+  run data modify entity 7374-0-0-0-2 text set value {text: "⭕", color: "red"}
 $execute \
   unless entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-3 text set value '{"text": "⭕", "color": "red"}'
+  run data modify entity 7374-0-0-0-3 text set value {text: "⭕", color: "red"}
 $execute \
   unless entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-4 text set value '{"text": "⭕", "color": "red"}'
+  run data modify entity 7374-0-0-0-4 text set value {text: "⭕", color: "red"}
 $execute \
   unless entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-5 text set value '{"text": "⭕", "color": "red"}'
+  run data modify entity 7374-0-0-0-5 text set value {text: "⭕", color: "red"}
 $execute \
   unless entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-6 text set value '{"text": "⭕", "color": "red"}'
+  run data modify entity 7374-0-0-0-6 text set value {text: "⭕", color: "red"}
 $execute \
   unless entity @a[distance=..$(RequiredPlayerRange)] \
-  run data modify entity 7374-0-0-0-7 text set value '{"text": "⭕", "color": "red"}'
+  run data modify entity 7374-0-0-0-7 text set value {text: "⭕", color: "red"}
