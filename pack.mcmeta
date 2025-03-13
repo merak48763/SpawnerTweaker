@@ -1,6 +1,10 @@
 {
   "pack": {
     "pack_format": 61,
+    "supported_formats": [61, 61],
     "description": "Spawner Tweaker for 1.21.4"
+  },
+  "overlays": {
+    "entries": []
   }
 }
