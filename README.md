@@ -2,7 +2,7 @@
 
 A data pack that makes it easier to fine-tune mob spawners.  
 Adapted from [the-link2012/spawner_tweaker](https://github.com/the-link2012/spawner_tweaker).  
-Minecraft version: 1.21.4
+Minecraft version: 1.21.4 ~ 1.21.5
 
 > [!Warning]
 > Multiplayer is **not** supported.
