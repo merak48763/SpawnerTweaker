@@ -1,5 +1,7 @@
 # SpawnerTweaker
 
+[![GitHub Release](https://img.shields.io/github/v/release/merak48763/SpawnerTweaker?style=for-the-badge&logo=github)](https://github.com/merak48763/SpawnerTweaker/releases)
+
 A data pack that makes it easier to fine-tune mob spawners.  
 Adapted from [the-link2012/spawner_tweaker](https://github.com/the-link2012/spawner_tweaker).  
 Minecraft version: 1.21.4 ~ 1.21.10

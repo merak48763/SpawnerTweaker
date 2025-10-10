@@ -13,19 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Extract repo and tag
-        id: vars
-        run: |
-          echo "repo_name=${GITHUB_REPOSITORY##*/}" >> $GITHUB_OUTPUT
-          echo "release_tag=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
-
       - name: Zip datapack
         run: |
           cd src
-          zip -r "../${{ steps.vars.outputs.repo_name }}-${{ steps.vars.outputs.release_tag }}.zip" .
+          zip -r "../${{ github.event.repository.name }}-${{ github.ref_name }}.zip" .
           cd ..
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
-          files: "${{ steps.vars.outputs.repo_name }}-${{ steps.vars.outputs.release_tag }}.zip"
+          files: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
