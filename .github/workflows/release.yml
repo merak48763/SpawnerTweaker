@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Zip datapack
         run: |
@@ -23,3 +25,15 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
+
+      - name: Send notification to Discord
+        if: always()
+        uses: tsickert/discord-webhook@v7.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          embed-title: "[${{ github.event.repository.name }}] automated release"
+          embed-url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          embed-description: |
+            **Tag**: ${{ github.ref_name }}
+            **Status**: ${{ job.status }}
+          embed-timestamp: ${{ github.event.release.published_at }}
