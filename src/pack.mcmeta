@@ -1,9 +1,9 @@
 {
   "pack": {
     "pack_format": 71,
-    "supported_formats": [61, 88],
-    "min_format": 61, "max_format": 88,
-    "description": "Spawner Tweaker for 1.21.4 ~ 1.21.9"
+    "supported_formats": [61, 94],
+    "min_format": 61, "max_format": 94,
+    "description": "Spawner Tweaker for 1.21.4 ~ 1.21.11"
   },
   "overlays": {
     "entries": [
